@@ -16,7 +16,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ServiceCard from "@/components/ServiceCard";
-import heroImage from "@/assets/hero-caring-hands.jpg";
+import HeroCarousel from "@/components/HeroCarousel";
 
 const Index = () => {
   const phoneNumber = "5511999999999";
@@ -67,86 +67,61 @@ const Index = () => {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero Section */}
-      <section id="inicio" className="relative pt-20 md:pt-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-background" />
-        
-        <div className="container mx-auto px-4 py-16 md:py-24 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-up">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                Clínica de Cuidados com Idosos
-              </span>
-              
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-                Cuidado, respeito e dignidade para{" "}
-                <span className="text-gradient">quem você mais ama</span>
-              </h1>
-              
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                Somos uma clínica especializada no cuidado integral de idosos, oferecendo 
-                atenção personalizada, segurança e bem-estar em todas as etapas da vida.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-lg px-8 group"
-                  onClick={() => window.open(whatsappUrl, "_blank")}
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Falar com a clínica
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="text-lg px-8 border-primary/30 hover:bg-primary/5"
-                  onClick={() => document.querySelector("#servicos")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Conhecer serviços
-                </Button>
-              </div>
-
-              {/* Trust indicators */}
-              <div className="mt-12 pt-8 border-t border-border">
-                <div className="flex flex-wrap gap-6">
-                  {values.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <item.icon className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium">{item.text}</span>
-                    </div>
-                  ))}
+      {/* Hero Section com Carrossel */}
+      <section id="inicio" className="pt-16 md:pt-20">
+        <HeroCarousel>
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl">
+              <div className="animate-fade-up">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-background/20 backdrop-blur-sm text-background text-sm font-medium mb-6 border border-background/30">
+                  Clínica de Cuidados com Idosos
+                </span>
+                
+                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6 drop-shadow-lg">
+                  Cuidado, respeito e dignidade para{" "}
+                  <span className="text-accent">quem você mais ama</span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-background/90 leading-relaxed mb-8 max-w-2xl drop-shadow-md">
+                  Somos uma clínica especializada no cuidado integral de idosos, oferecendo 
+                  atenção personalizada, segurança e bem-estar em todas as etapas da vida.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                  <Button 
+                    size="lg" 
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group shadow-lg"
+                    onClick={() => window.open(whatsappUrl, "_blank")}
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Falar com a clínica
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="text-lg px-8 bg-background/10 backdrop-blur-sm border-background/30 text-background hover:bg-background/20"
+                    onClick={() => document.querySelector("#servicos")?.scrollIntoView({ behavior: "smooth" })}
+                  >
+                    Conhecer serviços
+                  </Button>
                 </div>
-              </div>
-            </div>
 
-            {/* Hero Image */}
-            <div className="relative animate-fade-up-delay">
-              <div className="relative rounded-2xl overflow-hidden shadow-elevated">
-                <img 
-                  src={heroImage} 
-                  alt="Cuidado acolhedor com idosos" 
-                  className="w-full h-[400px] md:h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-              </div>
-              
-              {/* Floating card */}
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-5 shadow-elevated border border-border max-w-xs hidden md:block">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-serif font-semibold text-foreground">+10 anos</p>
-                    <p className="text-sm text-muted-foreground">cuidando com amor e dedicação</p>
+                {/* Trust indicators */}
+                <div className="pt-6 border-t border-background/20">
+                  <div className="flex flex-wrap gap-6">
+                    {values.map((item, index) => (
+                      <div key={index} className="flex items-center gap-2 text-background/90">
+                        <item.icon className="w-5 h-5 text-accent" />
+                        <span className="text-sm font-medium">{item.text}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </HeroCarousel>
       </section>
 
       {/* Trust Banner */}
