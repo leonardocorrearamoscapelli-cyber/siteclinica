@@ -40,7 +40,7 @@ const Index = () => {
     },
     {
       icon: HeartHandshake,
-      title: "Cuidados Pós-Operatórios",
+      title: "Cuidados ",
       description: "Suporte especializado para recuperação após procedimentos cirúrgicos, com atenção personalizada e ambiente adequado."
     },
     {
