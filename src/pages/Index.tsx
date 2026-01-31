@@ -1,6 +1,5 @@
 import { 
   Heart, 
-  Pill, 
   HeartHandshake, 
   Users, 
   Home,
@@ -32,11 +31,6 @@ const Index = () => {
       icon: HandHeart,
       title: "Cuidadores em Missão",
       description: "Equipe de cuidadores dedicados e capacitados, disponíveis para acompanhamento contínuo e atenção personalizada."
-    },
-    {
-      icon: Pill,
-      title: "Administração de Medicamentos",
-      description: "Controle rigoroso e pontual da medicação, com acompanhamento profissional e comunicação transparente com a família."
     },
     {
       icon: HeartHandshake,
