@@ -4,47 +4,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clínica de Cuidados com Idosos - Design System
-   Cores suaves e acolhedoras que transmitem confiança e cuidado
+/* Residencial Santista - Design System
+   Cores amarelo e azul que transmitem confiança, acolhimento e profissionalismo
 */
 
 @layer base {
   :root {
     /* Fundo cremoso e acolhedor */
-    --background: 40 33% 98%;
-    --foreground: 220 20% 20%;
+    --background: 45 30% 98%;
+    --foreground: 215 30% 18%;
 
     /* Cards com tom levemente mais quente */
-    --card: 40 40% 99%;
-    --card-foreground: 220 20% 20%;
+    --card: 45 35% 99%;
+    --card-foreground: 215 30% 18%;
 
-    --popover: 40 40% 99%;
-    --popover-foreground: 220 20% 20%;
+    --popover: 45 35% 99%;
+    --popover-foreground: 215 30% 18%;
 
-    /* Verde-sálvia principal - transmite saúde e tranquilidade */
-    --primary: 158 35% 35%;
+    /* Azul principal - transmite confiança e profissionalismo */
+    --primary: 210 65% 45%;
     --primary-foreground: 0 0% 100%;
 
     /* Bege quente - acolhimento */
-    --secondary: 35 40% 92%;
-    --secondary-foreground: 220 20% 25%;
+    --secondary: 45 35% 92%;
+    --secondary-foreground: 215 30% 22%;
 
     /* Tons suaves para textos menos importantes */
-    --muted: 40 20% 94%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 45 20% 94%;
+    --muted-foreground: 215 20% 45%;
 
-    /* Coral suave para acentos e CTAs */
-    --accent: 15 70% 55%;
-    --accent-foreground: 0 0% 100%;
+    /* Amarelo dourado para acentos e CTAs */
+    --accent: 42 90% 50%;
+    --accent-foreground: 215 30% 15%;
 
     /* Estados */
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
     /* Bordas suaves */
-    --border: 40 25% 88%;
-    --input: 40 25% 88%;
-    --ring: 158 35% 35%;
+    --border: 45 25% 88%;
+    --input: 45 25% 88%;
+    --ring: 210 65% 45%;
 
     --radius: 0.75rem;
 
@@ -53,24 +53,24 @@
     --whatsapp-foreground: 0 0% 100%;
 
     /* Gradientes */
-    --gradient-hero: linear-gradient(135deg, hsl(158 35% 35%) 0%, hsl(165 30% 45%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(35 40% 95%) 0%, hsl(40 33% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(15 70% 55%) 0%, hsl(25 75% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 65% 45%) 0%, hsl(215 60% 55%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(45 35% 95%) 0%, hsl(45 30% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(42 90% 50%) 0%, hsl(38 85% 55%) 100%);
 
     /* Sombras elegantes */
-    --shadow-soft: 0 4px 20px -4px hsl(220 20% 20% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(220 20% 20% / 0.12);
-    --shadow-elevated: 0 20px 50px -15px hsl(220 20% 20% / 0.15);
+    --shadow-soft: 0 4px 20px -4px hsl(215 30% 18% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(215 30% 18% / 0.12);
+    --shadow-elevated: 0 20px 50px -15px hsl(215 30% 18% / 0.15);
 
     /* Sidebar */
-    --sidebar-background: 40 33% 97%;
-    --sidebar-foreground: 220 20% 25%;
-    --sidebar-primary: 158 35% 35%;
+    --sidebar-background: 45 30% 97%;
+    --sidebar-foreground: 215 30% 22%;
+    --sidebar-primary: 210 65% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 35 40% 92%;
-    --sidebar-accent-foreground: 220 20% 25%;
-    --sidebar-border: 40 25% 88%;
-    --sidebar-ring: 158 35% 35%;
+    --sidebar-accent: 45 35% 92%;
+    --sidebar-accent-foreground: 215 30% 22%;
+    --sidebar-border: 45 25% 88%;
+    --sidebar-ring: 210 65% 45%;
   }
 }
 
@@ -150,7 +150,7 @@
   .section-decorated::before {
     content: '';
     @apply absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-30;
-    background: radial-gradient(circle, hsl(158 35% 35% / 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(210 65% 45% / 0.15) 0%, transparent 70%);
   }
 
   /* Texto com destaque */

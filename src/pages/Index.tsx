@@ -1,6 +1,5 @@
 import { 
   Heart, 
-  Stethoscope, 
   Pill, 
   HeartHandshake, 
   Users, 
@@ -9,7 +8,8 @@ import {
   Star,
   CheckCircle,
   MessageCircle,
-  ArrowRight
+  ArrowRight,
+  HandHeart
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -20,7 +20,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 
 const Index = () => {
   const phoneNumber = "5511999999999";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da clínica.")}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços do Residencial Santista.")}`;
 
   const services = [
     {
@@ -29,9 +29,9 @@ const Index = () => {
       description: "Acompanhamento integral das atividades diárias, garantindo conforto, segurança e bem-estar em cada momento do dia."
     },
     {
-      icon: Stethoscope,
-      title: "Acompanhamento de Enfermagem",
-      description: "Equipe de enfermagem especializada disponível para monitoramento contínuo da saúde e necessidades médicas."
+      icon: HandHeart,
+      title: "Cuidadores em Missão",
+      description: "Equipe de cuidadores dedicados e capacitados, disponíveis para acompanhamento contínuo e atenção personalizada."
     },
     {
       icon: Pill,
@@ -40,8 +40,8 @@ const Index = () => {
     },
     {
       icon: HeartHandshake,
-      title: "Cuidados ",
-      description: "Suporte especializado para recuperação após procedimentos cirúrgicos, com atenção personalizada e ambiente adequado."
+      title: "Cuidados Especializados",
+      description: "Suporte especializado para recuperação e bem-estar, com atenção personalizada e ambiente adequado."
     },
     {
       icon: Users,
@@ -58,7 +58,7 @@ const Index = () => {
   const values = [
     { icon: Heart, text: "Cuidado com amor" },
     { icon: Shield, text: "Ambiente seguro" },
-    { icon: Star, text: "Equipe qualificada" },
+    { icon: Star, text: "Cuidadores qualificados" },
     { icon: Users, text: "Vínculo familiar" }
   ];
 
@@ -74,7 +74,7 @@ const Index = () => {
             <div className="max-w-3xl">
               <div className="animate-fade-up">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-background/20 backdrop-blur-sm text-background text-sm font-medium mb-6 border border-background/30">
-                  Clínica de Cuidados com Idosos
+                  Residencial para Idosos
                 </span>
                 
                 <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6 drop-shadow-lg">
@@ -83,7 +83,7 @@ const Index = () => {
                 </h1>
                 
                 <p className="text-lg md:text-xl text-background/90 leading-relaxed mb-8 max-w-2xl drop-shadow-md">
-                  Somos uma clínica especializada no cuidado integral de idosos, oferecendo 
+                  Somos um residencial especializado no cuidado integral de idosos, oferecendo 
                   atenção personalizada, segurança e bem-estar em todas as etapas da vida.
                 </p>
                 
@@ -94,7 +94,7 @@ const Index = () => {
                     onClick={() => window.open(whatsappUrl, "_blank")}
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    Falar com a clínica
+                    Falar com o residencial
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button 
@@ -146,7 +146,7 @@ const Index = () => {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Nascemos da vontade de oferecer aos idosos um espaço onde eles se sintam 
-              verdadeiramente acolhidos, respeitados e amados. Mais do que uma clínica, 
+              verdadeiramente acolhidos, respeitados e amados. Mais do que um residencial, 
               somos uma extensão da família.
             </p>
           </div>
@@ -159,8 +159,7 @@ const Index = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Nossa Missão</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Proporcionar cuidado integral, humanizado e personalizado a cada idoso, 
-                promovendo qualidade de vida, dignidade e bem-estar.
+                Promover cuidados de saúde integral aos idosos com humanização e excelência.
               </p>
             </div>
 
@@ -171,8 +170,7 @@ const Index = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Nossa Visão</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Ser referência em cuidados com idosos, reconhecida pelo atendimento 
-                acolhedor e pela excelência dos nossos profissionais.
+                Ser reconhecido na Baixada Santista pela qualidade e assistência aos idosos.
               </p>
             </div>
 
@@ -183,8 +181,7 @@ const Index = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Nossos Valores</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Respeito, empatia, dedicação, transparência e amor ao próximo guiam 
-                cada uma das nossas ações no dia a dia.
+                Integridade, compaixão, relacionamento e inovação.
               </p>
             </div>
           </div>
@@ -192,11 +189,11 @@ const Index = () => {
           {/* Diferenciais */}
           <div className="mt-16 bg-secondary/50 rounded-2xl p-8 md:p-12">
             <h3 className="font-serif text-2xl font-semibold text-foreground text-center mb-8">
-              Por que escolher a Vida Plena?
+              Por que escolher o Residencial Santista?
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                "Profissionais qualificados e experientes",
+                "Cuidadores qualificados e experientes",
                 "Ambiente seguro e acolhedor",
                 "Atendimento humanizado 24 horas",
                 "Comunicação transparente com a família"
@@ -252,7 +249,7 @@ const Index = () => {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Tire suas dúvidas, agende uma visita ou conheça melhor nossos serviços. 
-              Nossa equipe está à disposição para atendê-lo com todo carinho.
+              Nossa equipe de cuidadores está à disposição para atendê-lo com todo carinho.
             </p>
             
             <Button 
@@ -279,7 +276,7 @@ const Index = () => {
                   <Home className="w-6 h-6 text-primary" />
                 </div>
                 <h4 className="font-semibold text-foreground mb-1">Endereço</h4>
-                <p className="text-muted-foreground">Rua do Cuidado, 123 - SP</p>
+                <p className="text-muted-foreground">Baixada Santista - SP</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">

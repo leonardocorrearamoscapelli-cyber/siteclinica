@@ -24,9 +24,9 @@ interface HeroImage {
 // Array de imagens - adicione ou remova imagens aqui
 const heroImages: HeroImage[] = [
   { src: heroImage1, alt: "Cuidado acolhedor com idosos" },
-  { src: heroImage2, alt: "Ambiente confortável da clínica" },
-  { src: heroImage3, alt: "Profissionais cuidando de idosos" },
-  { src: heroImage4, alt: "Jardim tranquilo da clínica" },
+  { src: heroImage2, alt: "Ambiente confortável do residencial" },
+  { src: heroImage3, alt: "Cuidadores atendendo idosos" },
+  { src: heroImage4, alt: "Jardim tranquilo do residencial" },
 ];
 
 interface HeroCarouselProps {
