@@ -41,7 +41,7 @@ const Header = () => {
               <Heart className="w-5 h-5 text-primary-foreground" />
             </div>
             <div className="hidden sm:block">
-              <span className="font-serif text-lg md:text-xl font-semibold text-foreground">Residencial Santista</span>
+              <span className="font-serif text-lg md:text-xl font-semibold text-foreground">Residencial Solar Santista</span>
               <span className="block text-xs text-muted-foreground -mt-1">Cuidados com Idosos</span>
             </div>
           </Link>
@@ -70,7 +70,7 @@ const Header = () => {
             ))}
             <Button
               size="sm"
-              onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços do Residencial Santista.", "_blank")}
+              onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços do Residencial Solar Santista.", "_blank")}
               className="bg-primary hover:bg-primary/90"
             >
               Fale Conosco
@@ -113,7 +113,7 @@ const Header = () => {
                 )
               ))}
               <Button
-                onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços do Residencial Santista.", "_blank")}
+                onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços do Residencial Solar Santista.", "_blank")}
                 className="bg-primary hover:bg-primary/90 w-full mt-2 min-h-[48px]"
               >
                 Fale Conosco

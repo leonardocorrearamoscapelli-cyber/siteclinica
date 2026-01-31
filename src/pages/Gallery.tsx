@@ -16,10 +16,10 @@ const Gallery = () => {
 
   // Array de imagens - fácil de atualizar com fotos reais
   const galleryImages = [
-    { src: heroAmbiente, alt: "Ambiente acolhedor do Residencial Santista" },
+    { src: heroAmbiente, alt: "Ambiente acolhedor do Residencial Solar Santista" },
     { src: heroCuidado, alt: "Cuidado personalizado com nossos idosos" },
     { src: heroJardim, alt: "Área externa com jardim" },
-    { src: heroCaringHands, alt: "Cuidadores atenciosos" },
+    { src: heroCaringHands, alt: "Cuidadoras atenciosas" },
     { src: heroAmbiente, alt: "Espaço de convivência" },
     { src: heroCuidado, alt: "Momentos de carinho e atenção" },
   ];
@@ -95,7 +95,7 @@ const Gallery = () => {
               Quer conhecer nosso espaço pessoalmente?
             </p>
             <a
-              href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma visita ao Residencial Santista."
+              href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma visita ao Residencial Solar Santista."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground px-6 py-3 rounded-lg font-medium transition-colors"
