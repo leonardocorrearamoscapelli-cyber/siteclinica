@@ -8,7 +8,13 @@ import {
   CheckCircle,
   MessageCircle,
   ArrowRight,
-  HandHeart
+  Stethoscope,
+  Activity,
+  Brain,
+  Apple,
+  Clock,
+  Sparkles,
+  PartyPopper
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -19,40 +25,50 @@ import HeroCarousel from "@/components/HeroCarousel";
 
 const Index = () => {
   const phoneNumber = "5511999999999";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços do Residencial Santista.")}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços do Residencial Solar Santista.")}`;
 
   const services = [
     {
-      icon: Heart,
-      title: "Cuidados Diários",
-      description: "Acompanhamento integral das atividades diárias, garantindo conforto, segurança e bem-estar em cada momento do dia."
+      icon: Stethoscope,
+      title: "Médico Clínico Geral",
+      description: "Acompanhamento médico semanal para avaliação e cuidado contínuo da saúde dos nossos idosos."
     },
     {
-      icon: HandHeart,
-      title: "Cuidadores em Missão",
-      description: "Equipe de cuidadores dedicados e capacitados, disponíveis para acompanhamento contínuo e atenção personalizada."
+      icon: Activity,
+      title: "Fisioterapia em Grupo",
+      description: "Sessões de fisioterapia duas vezes por semana, promovendo mobilidade, bem-estar e qualidade de vida."
+    },
+    {
+      icon: Brain,
+      title: "Terapia Ocupacional",
+      description: "Atividades semanais que estimulam a autonomia, cognição e socialização dos nossos residentes."
+    },
+    {
+      icon: Apple,
+      title: "Nutricionista",
+      description: "Avaliação mensal individualizada e cardápio diário adaptado às necessidades de cada idoso, com 6 refeições diárias."
     },
     {
       icon: HeartHandshake,
-      title: "Cuidados Especializados",
-      description: "Suporte especializado para recuperação e bem-estar, com atenção personalizada e ambiente adequado."
+      title: "Cuidadoras 24 Horas",
+      description: "Equipe de cuidadoras dedicadas e capacitadas, disponíveis dia e noite para atenção personalizada e carinhosa."
     },
     {
-      icon: Users,
-      title: "Atendimento Humanizado",
-      description: "Tratamos cada idoso com respeito, carinho e dignidade, criando vínculos de confiança e afeto genuíno."
+      icon: Sparkles,
+      title: "Serviço de Lavanderia",
+      description: "Cuidamos das roupas dos nossos idosos com atenção e carinho, garantindo conforto e praticidade."
     },
     {
-      icon: Home,
-      title: "Apoio à Família",
-      description: "Orientação e suporte aos familiares, mantendo comunicação constante sobre o bem-estar do seu ente querido."
+      icon: PartyPopper,
+      title: "Festinhas Temáticas",
+      description: "Celebramos datas comemorativas com festas especiais, promovendo alegria, integração e momentos inesquecíveis."
     }
   ];
 
   const values = [
     { icon: Heart, text: "Cuidado com amor" },
     { icon: Shield, text: "Ambiente seguro" },
-    { icon: Star, text: "Cuidadores qualificados" },
+    { icon: Star, text: "Cuidadoras qualificadas" },
     { icon: Users, text: "Vínculo familiar" }
   ];
 
@@ -71,20 +87,20 @@ const Index = () => {
                   Residencial para Idosos
                 </span>
                 
-                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6 drop-shadow-lg">
+                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-4 sm:mb-6 drop-shadow-lg">
                   Cuidado, respeito e dignidade para{" "}
                   <span className="text-accent">quem você mais ama</span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-background/90 leading-relaxed mb-8 max-w-2xl drop-shadow-md">
+                <p className="text-base sm:text-lg md:text-xl text-background/90 leading-relaxed mb-6 sm:mb-8 max-w-2xl drop-shadow-md">
                   Somos um residencial especializado no cuidado integral de idosos, oferecendo 
-                  atenção personalizada, segurança e bem-estar em todas as etapas da vida.
+                  atenção personalizada, segurança e bem-estar.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10">
                   <Button 
                     size="lg" 
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group shadow-lg"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground text-base sm:text-lg px-6 sm:px-8 group shadow-lg w-full sm:w-auto"
                     onClick={() => window.open(whatsappUrl, "_blank")}
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
@@ -94,7 +110,7 @@ const Index = () => {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="text-lg px-8 bg-background/10 backdrop-blur-sm border-background/30 text-background hover:bg-background/20"
+                    className="text-base sm:text-lg px-6 sm:px-8 bg-background/10 backdrop-blur-sm border-background/30 text-background hover:bg-background/20 w-full sm:w-auto"
                     onClick={() => document.querySelector("#servicos")?.scrollIntoView({ behavior: "smooth" })}
                   >
                     Conhecer serviços
@@ -187,9 +203,9 @@ const Index = () => {
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                "Cuidadores qualificados e experientes",
+                "Cuidadoras qualificadas e experientes",
                 "Ambiente seguro e acolhedor",
-                "Atendimento humanizado 24 horas",
+                "Atendimento humanizado 24 horas por cuidadoras",
                 "Comunicação transparente com a família"
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -218,7 +234,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -227,6 +243,13 @@ const Index = () => {
                 description={service.description}
               />
             ))}
+          </div>
+
+          {/* Nota de transparência */}
+          <div className="mt-10 sm:mt-12 bg-secondary/70 rounded-xl p-5 sm:p-6 border border-border/50">
+            <p className="text-muted-foreground text-sm sm:text-base text-center leading-relaxed">
+              <strong className="text-foreground">Informação importante:</strong> Fraldas, medicações e produtos de higiene pessoal são de responsabilidade da família.
+            </p>
           </div>
         </div>
       </section>
@@ -241,43 +264,43 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               Estamos prontos para cuidar de quem você ama
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
               Tire suas dúvidas, agende uma visita ou conheça melhor nossos serviços. 
-              Nossa equipe de cuidadores está à disposição para atendê-lo com todo carinho.
+              Nossa equipe de cuidadoras está à disposição para atendê-lo com todo carinho.
             </p>
             
             <Button 
               size="lg" 
-              className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-lg px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all group"
+              className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-sm sm:text-lg px-6 sm:px-10 py-4 sm:py-6 h-auto shadow-lg hover:shadow-xl transition-all group w-full sm:w-auto"
               onClick={() => window.open(whatsappUrl, "_blank")}
             >
-              <MessageCircle className="w-6 h-6 mr-3" />
-              Entrar em contato pelo WhatsApp
-              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+              <span className="whitespace-nowrap">Falar pelo WhatsApp</span>
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
             </Button>
 
             {/* Info cards */}
-            <div className="grid sm:grid-cols-3 gap-6 mt-12 pt-12 border-t border-border">
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-6 h-6 text-primary" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-12 pt-10 sm:pt-12 border-t border-border">
+              <div className="text-center p-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
-                <p className="text-muted-foreground">(11) 99999-9999</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Telefone</h4>
+                <p className="text-muted-foreground text-sm sm:text-base">(11) 99999-9999</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Home className="w-6 h-6 text-primary" />
+              <div className="text-center p-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Home className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">Endereço</h4>
-                <p className="text-muted-foreground">Baixada Santista - SP</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Endereço</h4>
+                <p className="text-muted-foreground text-sm sm:text-base">Baixada Santista - SP</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-primary" />
+              <div className="text-center p-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">Horário</h4>
-                <p className="text-muted-foreground">Seg-Sex: 8h às 18h</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Horário</h4>
+                <p className="text-muted-foreground text-sm sm:text-base">Seg-Sex: 8h às 18h</p>
               </div>
             </div>
           </div>

@@ -81,11 +81,15 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -162,8 +166,14 @@
 
   .section-decorated::before {
     content: '';
-    @apply absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-30;
+    @apply absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-30 hidden sm:block;
     background: radial-gradient(circle, hsl(210 65% 45% / 0.15) 0%, transparent 70%);
+  }
+
+  /* Container sem overflow em mobile */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+    max-width: 100%;
   }
 
   /* Texto com destaque */

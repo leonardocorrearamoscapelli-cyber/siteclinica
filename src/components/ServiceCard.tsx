@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon: Icon, title, description }: ServiceCardProps) => {
   const phoneNumber = "5511999999999";
-  const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o serviço do Residencial Santista: ${title}`);
+  const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o serviço do Residencial Solar Santista: ${title}`);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (

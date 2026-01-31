@@ -14,7 +14,7 @@ const Footer = () => {
                 <Heart className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <span className="font-serif text-xl font-semibold">Residencial Santista</span>
+                <span className="font-serif text-xl font-semibold">Residencial Solar Santista</span>
                 <span className="block text-xs text-primary-foreground/80 -mt-1">Cuidados com Idosos</span>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} Residencial Santista. Todos os direitos reservados.
+            © {currentYear} Residencial Solar Santista. Todos os direitos reservados.
           </p>
           <p className="text-primary-foreground/40 text-xs mt-2">
             Cuidando com amor e dedicação.
