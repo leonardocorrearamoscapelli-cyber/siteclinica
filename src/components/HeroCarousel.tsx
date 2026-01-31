@@ -77,7 +77,7 @@ const HeroCarousel = ({ children }: HeroCarouselProps) => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+    <div className="relative w-full min-h-[550px] h-[85vh] max-h-[800px] overflow-hidden">
       {/* Carrossel de imagens */}
       <div className="absolute inset-0" ref={emblaRef}>
         <div className="flex h-full">
